@@ -1,0 +1,5 @@
+D:\Desktop\ZeroMQ\SharpClient\bin\Debug\SharpClient.exe
+D:\Desktop\ZeroMQ\SharpClient\bin\Debug\SharpClient.pdb
+D:\Desktop\ZeroMQ\SharpClient\bin\Debug\clrzmq.dll
+D:\Desktop\ZeroMQ\SharpClient\obj\Debug\SharpClient.exe
+D:\Desktop\ZeroMQ\SharpClient\obj\Debug\SharpClient.pdb
