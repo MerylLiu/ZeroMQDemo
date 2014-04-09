@@ -1,5 +1,4 @@
 ZeroMQ
 ====
 
-
-User ZeroMQ with c++ and c#
+Use ZeroMQ with c++ and c#
