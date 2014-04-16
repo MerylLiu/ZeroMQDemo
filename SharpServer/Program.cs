@@ -19,7 +19,7 @@ namespace SharpServer
 
                     while (true)
                     {
-                        var msg = "test the zeromq";
+                        var msg = "test|the zeromq";
                         socket.Send(msg, Encoding.UTF8);
 
                         Console.WriteLine("Send message:{0}", msg);
