@@ -20,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	zmq_bind(m_publisher,pubLocalAddr);
 
-	char *msg = "test1234555testss";
+	char *msg = "test|1234555testss";
 
 
 	while (1)

@@ -13,7 +13,7 @@
                 using (ZmqSocket socket = context.CreateSocket(SocketType.SUB))
                 {
                     socket.Connect("tcp://127.0.0.1:8585");
-                    socket.Subscribe(Encoding.Default.GetBytes("tss"));
+                    socket.Subscribe(Encoding.Default.GetBytes("test"));
 
                     while (true)
                     {
