@@ -6,6 +6,8 @@ using System.Text;
 
 namespace WindowsServiceServer
 {
+    using ZeroMQ;
+
     static class Program
     {
         /// <summary>
@@ -14,11 +16,17 @@ namespace WindowsServiceServer
         static void Main()
         {
             ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[] 
-			{ 
-				new Service1() 
-			};
-            ServiceBase.Run(ServicesToRun);
+            ServicesToRun = new ServiceBase[1];
+
+            using (ZmqContext context = ZmqContext.Create())
+            {
+                using (ZmqSocket socket = context.CreateSocket(SocketType.PUB))
+                {
+                    socket.Bind("tcp://*:8585");
+                    ServicesToRun[0] = new Service1(socket);
+                    ServiceBase.Run(ServicesToRun);
+                }
+            }
         }
     }
 }

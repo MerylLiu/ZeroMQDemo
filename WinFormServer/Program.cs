@@ -21,14 +21,14 @@ namespace WinFormServer
                 {
                     socket.Bind("tcp://*:8585");
 
-                        var msg = "642|the zeromq"+new Random().Next();
-                        socket.Send(msg, Encoding.UTF8);
+                    var msg = "642|the zeromq" + new Random().Next();
+                    socket.Send(msg, Encoding.UTF8);
 
-                        Console.WriteLine("Send message:{0}", msg);
+                    Console.WriteLine("Send message:{0}", msg);
 
-                        Application.EnableVisualStyles();
-                        Application.SetCompatibleTextRenderingDefault(false);
-                        Application.Run(new Form1(socket));
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Form1(socket));
                 }
             }
         }
