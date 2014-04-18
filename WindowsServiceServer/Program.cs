@@ -15,16 +15,15 @@ namespace WindowsServiceServer
         /// </summary>
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[1];
+            ServiceBase[] servicesToRun = new ServiceBase[1];
 
             using (ZmqContext context = ZmqContext.Create())
             {
                 using (ZmqSocket socket = context.CreateSocket(SocketType.PUB))
                 {
                     socket.Bind("tcp://*:8585");
-                    ServicesToRun[0] = new Service1(socket);
-                    ServiceBase.Run(ServicesToRun);
+                    servicesToRun[0] = new Service1(socket);
+                    ServiceBase.Run(servicesToRun);
                 }
             }
         }
