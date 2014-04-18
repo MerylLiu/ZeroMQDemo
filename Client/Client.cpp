@@ -4,11 +4,17 @@
 #include "stdafx.h"
 #include "zmq.h"
 #include "zmq_utils.h"
+#include <locale>
 
 #pragma comment(lib,"libzmq.lib")
 
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
+	setlocale(LC_ALL,"Chinese");
+	setlocale(LC_ALL,"chs");
+
 	void *m_context;
 	void *m_subscriber;
 	char m_subAddr[64];
@@ -16,6 +22,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	m_context = zmq_init(1);
 	m_subscriber = zmq_socket(m_context,ZMQ_SUB);
 
+	
 	char *puberIp = "127.0.0.1";
 	WORD port = 8585;
 
@@ -24,8 +31,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	zmq_connect(m_subscriber,m_subAddr);
 
-	char *option = "test";
-	int ret = zmq_setsockopt(m_subscriber,ZMQ_SUBSCRIBE,"test",strlen(option));
+	char *option = "642";
+	int ret = zmq_setsockopt(m_subscriber,ZMQ_SUBSCRIBE,"642",strlen(option));
 
 	while (1)
 	{
