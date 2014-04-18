@@ -17,24 +17,23 @@ namespace WinFormServer
             InitializeComponent();
         }
 
+        public ZmqSocket _socket;
+
+        public Form1(ZmqSocket socket)
+        {
+            _socket = socket;
+            InitializeComponent();
+        }
+
+        Timer timer = new Timer();
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            Timer timer = new Timer();
             timer.Interval = 3000;
             timer.Tick += (s, a) =>
             {
-                using (ZmqContext context = ZmqContext.Create())
-                using (ZmqSocket socket = context.CreateSocket(SocketType.SUB))
-                {
-                    socket.Connect("tcp://127.0.0.1:8585");
-                    socket.Subscribe(Encoding.Default.GetBytes("test"));
-
-                    while (true)
-                    {
-                        string rep = socket.Receive(Encoding.UTF8);
-                        Console.WriteLine("this is :{0}",rep);
-                    }
-                }
+                var msg = "642|the zeromq" + new Random().Next();
+                _socket.Send(msg, Encoding.GetEncoding("gb2312"));
             };
             timer.Start();
         }

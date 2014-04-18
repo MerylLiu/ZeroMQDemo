@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpServer", "SharpServer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormServer", "WinFormServer\WinFormServer.csproj", "{BE670D0B-4647-4C9D-80D7-FF4BF8BCEB9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceServer", "WindowsServiceServer\WindowsServiceServer.csproj", "{AE984B32-D537-4F35-806A-BD4DC02AE112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{BE670D0B-4647-4C9D-80D7-FF4BF8BCEB9F}.Release|Win32.ActiveCfg = Release|x86
 		{BE670D0B-4647-4C9D-80D7-FF4BF8BCEB9F}.Release|x86.ActiveCfg = Release|x86
 		{BE670D0B-4647-4C9D-80D7-FF4BF8BCEB9F}.Release|x86.Build.0 = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|Win32.ActiveCfg = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|x86.ActiveCfg = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Debug|x86.Build.0 = Debug|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|Any CPU.ActiveCfg = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|Mixed Platforms.Build.0 = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|Win32.ActiveCfg = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|x86.ActiveCfg = Release|x86
+		{AE984B32-D537-4F35-806A-BD4DC02AE112}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
